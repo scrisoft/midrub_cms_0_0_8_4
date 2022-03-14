@@ -622,7 +622,7 @@ class Cron extends MY_Controller {
             }
             
             // Get update
-            $update_down = json_decode(get('https://update.midrub.com/0-0-8-4-u/'), TRUE);
+            $update_down = json_decode(get('https://update.midrub.com/0-0-8-4-b/'), TRUE);
 
             // New version variable
             $new_version = '';

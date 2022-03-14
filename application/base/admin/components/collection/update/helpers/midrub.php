@@ -161,7 +161,7 @@ class Midrub {
                 if ( $update_check ) {
 
                     // Get the update
-                    $get_update = json_decode(get('https://update.midrub.com/0-0-8-4-u/?l=' . $code), true);
+                    $get_update = json_decode(get('https://update.midrub.com/0-0-8-4-b/?l=' . $code), true);
 
                     // Verify if url exists
                     if ( isset($get_update['url']) ) {
