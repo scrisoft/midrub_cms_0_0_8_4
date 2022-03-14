@@ -56,9 +56,6 @@ class Userarea extends MY_Controller {
         // Load Networks Model
         $this->load->model('networks');
         
-        // Load Campaigns Model
-        $this->load->model('campaigns');
-        
         // Load Notifications Model
         $this->load->model('notifications');
         
