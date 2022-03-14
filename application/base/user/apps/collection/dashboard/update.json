@@ -1,0 +1,8 @@
+{
+    "version": "Version 0.4",
+    "changelogs": "This update contains improvemnts.",
+    "files": [
+        "application\/base\/user\/apps\/collection\/dashboard\/main.php",
+        "application\/base\/user\/apps\/collection\/dashboard\/inc\/admin.php"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "require": {
+        "tumblr/tumblr": "^0.2.0",
+        "jonathantorres/medium-sdk": "^0.2.0",
+        "facebook/graph-sdk": "^5.7",
+        "paragonie/random_compat": "^9.99",
+        "facebook/php-ads-sdk": "^3.2",
+        "symfony/dependency-injection": "^4.2",
+        "facebook/php-business-sdk": "^4.0",
+        "abraham/twitteroauth": "^3.3",
+        "google/apiclient": "2.12.1"
+    }
+}

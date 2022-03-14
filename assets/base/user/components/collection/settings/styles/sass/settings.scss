@@ -1,0 +1,629 @@
+/*******************************
+IMPORT FONTS
+********************************/
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+/*******************************
+MIDRUB GLOBAL VARIABLES
+********************************/
+$open-sans: 'Open Sans', sans-serif;
+$nunito-sans: 'Nunito Sans', sans-serif;
+$primary-black: #343a40;
+$primary-green: #01a28b;
+$primary-red: #ea6759;
+$primary-blue: #2e5f9b;
+$primary-yellow: #f7c48c;
+$primary-border-black: rgba(65, 106, 166, 0.1);
+
+/*******************************
+MIDRUB ELEMENTS STYLES
+********************************/
+@mixin content-shadow() {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 33px 0 rgba(144, 163, 171, 0.15);
+    box-shadow: 0 0 33px 0 rgba(144, 163, 171, 0.15);
+}
+
+@mixin opacity-animations($duration) {
+    -webkit-animation: loadingOpacity $duration;
+    animation: loadingOpacity $duration;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+        
+}
+
+@mixin checkbox-option() {
+    
+    .checkbox-option {
+        width: 100%;
+        text-align: right;
+
+        input[type=checkbox]{
+            display: none;
+        }
+
+        input[type=text] {
+            height: 35px;
+            line-height: 35px;
+            width: 100%;
+            padding: 0 7px;
+            border: 1px solid #c1c7cd;
+            color: #1b2733;
+            margin-top: 2px;
+        }
+
+        label{
+            cursor: pointer;
+            position: relative; 
+            margin: 20px 0 0;            
+            width: 40px;
+        }
+
+        label::before{
+            content: '';
+            margin: -6px 0 0 -45px;
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            border: 1px solid #bbc1e1;
+            border-radius: 8px;
+            transition: all 0.5s ease-in-out; 
+            opacity: 0.3;
+        }
+
+        label::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -3px;
+            width: 16px;
+            height: 16px;
+            border-radius: 16px;
+            background-color: #bfcbd6;
+            transition: all 0.3s ease-in-out;
+            
+        }
+
+        input[type=checkbox]:checked + label::after {
+            left: 17px;
+            background-color: #6086bf;
+            box-shadow: none;
+        }
+
+    }
+    
+    .textarea-option {
+        width: 100%;
+        text-align: right;
+        
+        input {
+            width: 100%;
+            padding: 6px 10px;
+            border: 1px solid #fbfbfb;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: #fbfbfb;
+            outline: 0;
+            resize: none;
+            
+            &:focus {
+                border: 1px solid #e6ecf0;
+                background-color: #FFFFFF;
+            }
+
+        }
+        
+        .btn {
+            display: none;
+        }
+        
+    }
+        
+}
+
+@mixin select-option() {
+    
+    .select-option {
+        width: 100%;
+        text-align: right;
+
+        select {
+            width: 100%;
+            padding: 4px;
+            outline: 0;
+            background-color: #fff;
+            border: 1px solid #e6ecf0;
+            border-radius: 3px;
+            margin-top: 4px;
+        }
+
+    }
+        
+}
+
+/*******************************
+SETTINGS STYLES
+********************************/
+        
+section {
+
+    &.settings-page {
+        padding: 30px;
+        
+        .tab-pane {
+            padding: 0;
+        }
+        
+        .page-title {
+            margin-bottom: 40px;
+            margin-left: -15px;            
+            font-size: 23px;
+            font-weight: 400;
+
+            @media screen and (max-width: 1199px) {
+
+                & {
+                    margin-left: 0;
+                }
+
+            }
+
+            .settings-save-changes {
+                display: none;
+                float: right;
+                padding: 5px 20px 7px;
+                font-size: 14px;
+                border-color: #6086bf;
+                background-color: #6086bf;
+                -webkit-box-shadow: 0 -3px 0px 0px rgba(0,0,0,0.12) inset, inset 0 0 0 1px rgba(0,0,0,0.08);
+                box-shadow: 0 -3px 0px 0px rgba(0,0,0,0.12) inset, inset 0 0 0 1px rgba(0,0,0,0.08);
+                
+                &:hover
+                &:active,
+                &:focus {
+                    border-color: #6086bf;
+                    background-color: #6086bf;
+                    opacity: 0.7;
+                }
+                
+            }
+
+        } 
+        
+        & > .row {
+            
+            & > .col-xl-2 {
+                display: inline-table;
+                margin-bottom: 20px;  
+                padding: 0 15px 0 0;
+                min-height: 100px;
+                background-color: #FFFFFF;
+
+                .settings-menu-group {
+                    margin-bottom: 40px;
+                    width: 100%;
+                    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .settings-menu-header {
+                        margin-top: 25px;
+                        margin-bottom: 20px;
+                        font-size: 15px;
+                        font-weight: 400;
+                    }
+
+                    .nav {
+                        width: 100%;
+                        border-bottom: 0;
+
+                        li {
+                            padding: 0;
+                            width: 100%;
+                            
+                            &:first-child {
+                                
+                                .settings-menu-header {
+                                    margin-top: 0;
+                                }
+                                
+                            }
+
+                            a {
+                                display: block;
+                                padding: 0 15px;
+                                border: 0;
+                                line-height: 40px;
+                                font-family: $open-sans, Arial, Helvetica;
+                                font-size: 13px;
+                                color: #4a6177;                                
+
+                                &:hover,
+                                &.active {
+                                    border-bottom: 0;
+                                    background-color: #f9fafb;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+                
+            }
+        
+            .col-xl-6 {
+                
+                @media only screen and (max-width: 1199px) {
+
+                    & {
+                        padding: 0;
+                    }
+
+                }
+        
+                .settings-list {
+                    min-height: 500px;
+                    border-radius: 4px;
+                    background-color: #FFFFFF;
+                    
+                    .tab-pane {
+                        
+                        &#referrals {
+                            
+                            .input-group {
+                                padding: 15px;
+                                padding: 15px;
+                                background-color: #fbfbfb;
+                                border: 1px solid #f6f7f7;
+                                margin: 15px;
+                                width: calc(100% - 30px);
+                                
+                                h4 {
+                                    color: $primary-black;
+                                    font-size: 15px;
+                                    width: 100%;
+                                    font-weight: 600;
+                                    font-family: "Open Sans", sans-serif, "Arimo";
+                                }
+                                
+                                p {
+                                    width: 100%;
+                                    font-size: 13px;
+                                    color: #827f9b;
+                                    margin-bottom: 15px;
+                                }
+                                
+                                input[type="text"] {
+                                    color: #495047;
+                                    background-color: #fff;
+                                    background-clip: padding-box;
+                                    border: 0;
+                                    height: 45px;
+                                    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+                                    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;                                    
+                                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+                                }
+                                
+                                .btn-default {
+                                    margin-left: 15px;
+                                    padding: 7px 10px 0;
+                                    border-radius: 0;
+                                    width: 50px;
+                                    font-size: 20px;
+                                    border-color: #FFFFFF;
+                                    background-color: #FFFFFF;
+                                    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                                    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                                    
+                                    &:hover {
+                                        opacity: 0.7;
+                                    }
+                                    
+                                    i {
+                                        margin-right: 0;
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                            .referral-single-stats {
+                                
+                                & > .col-xl-12 {
+                                    border: 1px solid #dee3eb;
+                                    min-height: 100px;
+                                    
+                                    h3 {
+                                        text-align: center;
+                                        color: #44484f;
+                                        font-weight: 400;
+                                        line-height: 50px;
+                                    }
+                                    
+                                    p {
+                                        text-align: center;
+                                        color: #a1aab7;
+                                        font-size: 13px;
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                        @media only screen and (max-width: 1199px) {
+                            
+                            & {
+                                margin: 0;
+                                padding: 0;
+                                width: 100%;
+                                max-width: 100%;
+                            }
+                            
+                        }
+                        
+                    }
+
+                    .panel {
+
+                        .panel-heading {
+                            padding: 15px;
+                            font-size: 15px;
+                            border-bottom: 1px solid rgba(65, 106, 166, 0.1);
+                            color: #212529;
+
+                            .bi {
+                                vertical-align: sub;
+                                margin-right: 5px;
+                                font-size: 20px;
+                            }
+
+                        }
+
+                        .panel-body {
+                            min-height: 600px;
+                            padding-bottom: 20px;
+
+                            .settings-list-options {
+                                margin: 0;
+                                padding: 0;
+
+                                li {
+                                    padding: 15px;
+                                    list-style: none;
+                                    border-bottom: 1px solid rgba(65, 106, 166, 0.05);
+                                    
+                                    &:last-child {
+                                        border-bottom: 0;
+                                    }
+
+                                    h4 {
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        color: #212529;
+                                    }
+
+                                    p {
+                                        margin-bottom: 5px;
+                                        font-size: 13px;
+                                        color: #827f9b;
+                                    }
+                                    
+                                    a {
+                                        display: block;
+                                        margin-top: 4px;
+                                        padding: 7px 10px 6px;
+                                        border: 1px solid #f1f1f1;
+                                        line-height: 23px;
+                                        text-align: center;
+                                        font-size: 15px;
+                                        color: $primary-black;
+                                        background-color: #FFFFFF;
+
+                                        &:hover,
+                                        &:active,
+                                        &:focus {
+                                            text-decoration: none;
+                                            background-color: #f8f9fa;
+                                        }
+
+                                    }
+
+                                    @include checkbox-option();
+                                    @include select-option();
+
+                                }
+
+                            }
+
+                            .settings-list-plan-usage {
+                                margin: 0;
+                                padding: 15px 15px 0;  
+                                
+                                li {
+                                    margin-bottom: 15px;
+                                    list-style: none;
+                                    margin-top: 10px;
+                                    background-color: #fbfbfb;
+                                    min-height: 60px;
+                                    padding: 14px;
+                                    font-size: 14px;
+                                    color: #818a91;
+
+                                    a {
+                                        color: #1da1f2;
+                                    }
+                                    
+                                    .progress {
+                                        height: 5px;
+
+                                        .progress-bar {
+                                            height: 5px;
+
+                                            &.bg-success {
+                                                background-color: #14b8c8 !important;
+                                            }
+
+                                            &.bg-danger {
+                                                background-color: $primary-red !important;
+                                            }                                        
+
+                                        }                                    
+
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                            .settings-list-invoices {
+                                margin: 15px;
+                                padding: 0;
+                                
+                                li {
+                                    width: 100%;
+                                    min-height: 50px;
+                                    list-style: none;
+                                    margin-bottom: 15px;
+                                    border-radius: 3px;
+                                    -webkit-box-shadow: 0 2px 2px rgba(36,37,37,.09);
+                                    box-shadow: 0 2px 2px rgba(36,37,37,.09);
+
+                                    &.no-invoices-found {
+                                        padding: 10px;
+                                        min-height: auto;
+                                        font-size: 14px;
+                                        border: 0;
+                                        background-color: #fbfbfb;
+                                        -webkit-box-shadow: none;
+                                        box-shadow: none;                                        
+                                    }
+
+                                    .row {
+
+                                        .col-xl-9 {
+
+                                            h3 {
+                                                font-family: $open-sans, "Arimo";
+                                                font-weight: 600;
+                                                color: #303233;
+                                                font-size: 13px;
+                                                margin: 0;
+                                                line-height: 54px;
+                                                padding-left: 10px;
+                                            }
+
+                                        }
+
+                                        .col-xl-3 {
+
+                                            a {
+                                                margin: 10px;
+                                                height: 36px;
+                                                background-color: #6086bf;
+                                                border-color: #6086bf;
+                                                font-size: 14px;
+                                                color: #FFFFFF;
+
+                                                &.btn-success {
+                                                    background-color: $primary-green;
+                                                    border-color: $primary-green;
+                                                }   
+
+                                                &:hover {
+                                                    opacity: 0.8;
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        .panel-footer {
+                            
+                            .pagination {
+                                margin: 0 15px 15px;
+                                padding: 0;
+                            }
+
+                        }
+
+                    }
+
+                }
+                
+            }
+
+        }
+        
+    }
+    
+}
+
+/*******************************
+MODAL STYLES
+********************************/
+#change-password {
+
+    .modal-content {
+
+        .modal-body {
+
+            input {
+                width: 100%;
+                padding: 6px 10px;
+                border: 1px solid #fbfbfb;
+                border-radius: 3px;
+                font-size: 14px;
+                background-color: #fbfbfb;
+                outline: 0;
+                resize: none;
+                
+                &:focus,
+                &:active {
+                    border: 1px solid #e6ecf0;
+                    background-color: #FFFFFF;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    outline: none;
+                }
+    
+            }
+
+        }
+
+        .modal-footer {
+            
+            .btn {
+                padding: 5px 20px 7px;
+                font-size: 14px;
+                background-color: #6086bf;
+                border-color: #6086bf;
+                -webkit-box-shadow: 0 -3px 0px 0px rgba(0,0,0,0.12) inset, inset 0 0 0 1px rgba(0,0,0,0.08);
+                box-shadow: 0 -3px 0px 0px rgba(0,0,0,0.12) inset, inset 0 0 0 1px rgba(0,0,0,0.08);
+
+                &:hover {
+                    opacity: 0.7;
+                }
+                    
+            }
+            
+        }
+
+    }
+    
+}

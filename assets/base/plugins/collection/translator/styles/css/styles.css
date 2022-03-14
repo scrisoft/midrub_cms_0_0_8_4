@@ -1,0 +1,433 @@
+/*******************************
+IMPORT FONTS
+********************************/
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,500;1,700&family=Inter:wght@200;300;400;500;600&display=swap");
+/*******************************
+TRANSLATOR VARIABLES
+********************************/
+/*******************************
+TRANSLATOR GENERAL CLASSES
+********************************/
+.theme-box {
+  background-color: #fbfeff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+
+.theme-font-1 {
+  font-family: "Roboto", "Open Sans", "Nunito", "Nunito Sans", sans-serif; }
+
+.theme-color-black {
+  color: #000031; }
+
+.theme-color-grey {
+  color: #ACA9BB; }
+
+.theme-color-grey-light {
+  color: #FAF7FF; }
+
+.theme-color-green {
+  color: #00b57b; }
+
+.theme-color-red {
+  color: #961B3F; }
+
+.theme-background-grey-light {
+  background-color: #F9F9FA; }
+
+.theme-background-green {
+  background-color: #00b57b; }
+
+.theme-background-red {
+  background-color: #961B3F; }
+
+.theme-settings-page {
+  padding-top: 15px; }
+  .theme-settings-page .nav-pills {
+    margin: 0 0 15px;
+    padding: 0; }
+    .theme-settings-page .nav-pills li {
+      margin-bottom: 10px; }
+      .theme-settings-page .nav-pills li a {
+        color: #002E5E;
+        background-color: transparent; }
+        .theme-settings-page .nav-pills li a i {
+          vertical-align: middle;
+          margin-top: -4px;
+          margin-right: 10px;
+          font-size: 20px; }
+      .theme-settings-page .nav-pills li:hover a, .theme-settings-page .nav-pills li:focus a, .theme-settings-page .nav-pills li:active a, .theme-settings-page .nav-pills li.theme-settings-nav-active a {
+        border-radius: 5px;
+        color: #002E5E;
+        background-color: #FFFFFF; }
+  .theme-settings-page .panel {
+    border: 0;
+    box-shadow: none; }
+    .theme-settings-page .panel .panel-heading {
+      margin: 0;
+      padding: 0 15px;
+      border-bottom: 1px solid #e3eaef;
+      line-height: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: transparent; }
+      .theme-settings-page .panel .panel-heading i {
+        vertical-align: middle;
+        margin-top: -5px;
+        margin-right: 5px; }
+    .theme-settings-page .panel .panel-body {
+      padding: 0;
+      min-height: 700px; }
+      .theme-settings-page .panel .panel-body .theme-settings-options-list {
+        margin: 0;
+        padding: 0; }
+        .theme-settings-page .panel .panel-body .theme-settings-options-list li {
+          padding: 15px;
+          border-bottom: 1px solid rgba(65, 106, 166, 0.05);
+          list-style: none; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li:last-child {
+            border-bottom: 0; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li h4 {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: 400; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li p {
+            margin-bottom: 0;
+            font-size: 13px; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li input[type="text"] {
+            margin-bottom: 0;
+            height: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            box-shadow: none; }
+            .theme-settings-page .panel .panel-body .theme-settings-options-list li input[type="text"]:active, .theme-settings-page .panel .panel-body .theme-settings-options-list li input[type="text"]:focus {
+              border: 1px solid rgba(0, 0, 0, 0.27) !important; }
+    .theme-settings-page .panel .panel-footer {
+      margin: 0;
+      border: 0;
+      border-top: 1px solid #e3eaef;
+      background-color: transparent; }
+
+/*******************************
+TRANSLATOR STYLES
+********************************/
+.theme-settings-page .breadcrumb {
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+  .theme-settings-page .breadcrumb li {
+    font-weight: 400;
+    color: #8F9EC2; }
+    .theme-settings-page .breadcrumb li a {
+      color: #002E5E; }
+      .theme-settings-page .breadcrumb li a:hover {
+        border-bottom: 1px solid #002E5E; }
+  .theme-settings-page .breadcrumb > li + li:before {
+    content: "\01F896";
+    padding: 0 10px;
+    font-size: 15px;
+    color: #ccc; }
+.theme-settings-page .panel.panel-all-languages .panel-body {
+  padding: 15px; }
+  .theme-settings-page .panel.panel-all-languages .panel-body input[type="text"] {
+    padding: 6px 12px;
+    width: calc(100% - 150px);
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    list-style: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+    .theme-settings-page .panel.panel-all-languages .panel-body input[type="text"]:focus, .theme-settings-page .panel.panel-all-languages .panel-body input[type="text"]:active {
+      border: 0 !important;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1) !important; }
+  .theme-settings-page .panel.panel-all-languages .panel-body .btn-group {
+    margin-right: 14px;
+    margin-bottom: 14px;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    list-style: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+    .theme-settings-page .panel.panel-all-languages .panel-body .btn-group:hover {
+      background-color: transparent; }
+    .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary {
+      height: 40px;
+      border: 0;
+      line-height: 28px;
+      color: #002E5E;
+      background-color: transparent; }
+      .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary i {
+        vertical-align: middle;
+        margin-top: -5px;
+        margin-right: 5px; }
+      .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary:hover {
+        background-color: #F9F9FA; }
+      .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary:first-child {
+        width: calc(100% - 150px);
+        text-align: left; }
+      .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary:last-child {
+        width: 150px;
+        border-left: 1px solid #e1e7f1; }
+      .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary.translator-plugin-disabled-button:first-child {
+        color: #8F9EC2;
+        pointer-events: none; }
+      .theme-settings-page .panel.panel-all-languages .panel-body .btn-group .btn-secondary.translator-plugin-language-save-btn {
+        position: absolute;
+        width: 150px; }
+  .theme-settings-page .panel.panel-all-languages .panel-body .btn-primary {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    font-size: 16px;
+    transition: all 0.3s; }
+    .theme-settings-page .panel.panel-all-languages .panel-body .btn-primary i {
+      vertical-align: bottom;
+      margin-top: -2px;
+      margin-right: 5px; }
+  .theme-settings-page .panel.panel-all-languages .panel-body .translator-plugin-new-language {
+    padding: 10px 30px; }
+  .theme-settings-page .panel.panel-all-languages .panel-body ul {
+    margin-bottom: 0; }
+    .theme-settings-page .panel.panel-all-languages .panel-body ul li {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: 0;
+      border-radius: 5px; }
+.theme-settings-page .panel.panel-language-files .panel-body {
+  padding: 15px; }
+  .theme-settings-page .panel.panel-language-files .panel-body table {
+    padding: 6px 12px;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    list-style: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+    .theme-settings-page .panel.panel-language-files .panel-body table thead tr,
+    .theme-settings-page .panel.panel-language-files .panel-body table tbody tr {
+      width: 100%;
+      border: 0; }
+      .theme-settings-page .panel.panel-language-files .panel-body table thead tr th,
+      .theme-settings-page .panel.panel-language-files .panel-body table thead tr td,
+      .theme-settings-page .panel.panel-language-files .panel-body table tbody tr th,
+      .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td {
+        border: 0; }
+        .theme-settings-page .panel.panel-language-files .panel-body table thead tr th:first-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table thead tr td:first-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody tr th:first-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td:first-child {
+          width: 40%; }
+        .theme-settings-page .panel.panel-language-files .panel-body table thead tr th:last-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table thead tr td:last-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody tr th:last-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td:last-child {
+          width: 60%; }
+      .theme-settings-page .panel.panel-language-files .panel-body table thead tr th,
+      .theme-settings-page .panel.panel-language-files .panel-body table tbody tr th {
+        color: #8F9EC2; }
+      .theme-settings-page .panel.panel-language-files .panel-body table thead tr td,
+      .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td {
+        border: 0; }
+        .theme-settings-page .panel.panel-language-files .panel-body table thead tr td:first-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td:first-child {
+          width: 40%;
+          font-weight: 500;
+          color: #002E5E; }
+          .theme-settings-page .panel.panel-language-files .panel-body table thead tr td:first-child i,
+          .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td:first-child i {
+            vertical-align: middle;
+            margin-top: -3px;
+            margin-left: 5px;
+            font-size: 22px; }
+        .theme-settings-page .panel.panel-language-files .panel-body table thead tr td:last-child,
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody tr td:last-child {
+          padding-bottom: 30px;
+          width: 60%;
+          color: #002E5E; }
+    .theme-settings-page .panel.panel-language-files .panel-body table thead {
+      border-bottom: 1px solid #F9F9FA; }
+      .theme-settings-page .panel.panel-language-files .panel-body table thead th {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+        color: #8F9EC2; }
+    .theme-settings-page .panel.panel-language-files .panel-body table tbody td .translator-plugin-word-area {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      margin-bottom: 15px;
+      padding: 5px 10px;
+      background-color: #F9F9FA;
+      -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+      align-items: center !important;
+      -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+      justify-content: space-between !important; }
+      .theme-settings-page .panel.panel-language-files .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word:hover, .theme-settings-page .panel.panel-language-files .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word:focus, .theme-settings-page .panel.panel-language-files .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word:active {
+        box-shadow: none;
+        outline: none; }
+      .theme-settings-page .panel.panel-language-files .panel-body table tbody td .translator-plugin-word-area a {
+        margin-left: 15px;
+        color: #002E5E; }
+        .theme-settings-page .panel.panel-language-files .panel-body table tbody td .translator-plugin-word-area a i {
+          vertical-align: bottom; }
+.theme-settings-page .panel.panel-language-file .panel-body {
+  padding: 15px; }
+  .theme-settings-page .panel.panel-language-file .panel-body table {
+    padding: 6px 12px;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    list-style: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+    .theme-settings-page .panel.panel-language-file .panel-body table thead tr,
+    .theme-settings-page .panel.panel-language-file .panel-body table tbody tr {
+      width: 100%;
+      border: 0; }
+      .theme-settings-page .panel.panel-language-file .panel-body table thead tr th,
+      .theme-settings-page .panel.panel-language-file .panel-body table thead tr td,
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody tr th,
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody tr td {
+        float: left;
+        width: 50%;
+        border: 0; }
+    .theme-settings-page .panel.panel-language-file .panel-body table thead {
+      border-bottom: 1px solid #F9F9FA; }
+      .theme-settings-page .panel.panel-language-file .panel-body table thead th {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+        color: #8F9EC2; }
+    .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+      align-items: center !important;
+      -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+      justify-content: space-between !important; }
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word {
+        padding: 5px; }
+        .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word:hover, .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word:focus, .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area .translator-plugin-word:active {
+          box-shadow: none;
+          outline: none; }
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area a {
+        margin-left: 15px;
+        color: #002E5E; }
+        .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area a.translator-plugin-word-save-btn {
+          display: none; }
+        .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area a i {
+          vertical-align: bottom; }
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area.translator-plugin-word-area-active .translator-plugin-word {
+        background-color: #f5f7fa; }
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area.translator-plugin-word-area-active .translator-plugin-word-edit-btn {
+        display: none; }
+      .theme-settings-page .panel.panel-language-file .panel-body table tbody td .translator-plugin-word-area.translator-plugin-word-area-active .translator-plugin-word-save-btn {
+        display: block; }
+
+/*******************************
+MODALS STYLES
+********************************/
+#translator-plugin-new-language-modal .modal-content .modal-header,
+#translator-plugin-delete-language-modal .modal-content .modal-header {
+  padding: 10px 15px; }
+  #translator-plugin-new-language-modal .modal-content .modal-header .modal-title,
+  #translator-plugin-delete-language-modal .modal-content .modal-header .modal-title {
+    display: inline-block;
+    width: calc(100% - 50px);
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: 400; }
+  #translator-plugin-new-language-modal .modal-content .modal-header .close i,
+  #translator-plugin-delete-language-modal .modal-content .modal-header .close i {
+    vertical-align: bottom; }
+#translator-plugin-new-language-modal .modal-content .modal-body table,
+#translator-plugin-delete-language-modal .modal-content .modal-body table {
+  padding: 6px 12px;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  list-style: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+  #translator-plugin-new-language-modal .modal-content .modal-body table thead tr,
+  #translator-plugin-new-language-modal .modal-content .modal-body table tbody tr,
+  #translator-plugin-delete-language-modal .modal-content .modal-body table thead tr,
+  #translator-plugin-delete-language-modal .modal-content .modal-body table tbody tr {
+    width: 100%;
+    border: 0; }
+    #translator-plugin-new-language-modal .modal-content .modal-body table thead tr th,
+    #translator-plugin-new-language-modal .modal-content .modal-body table thead tr td,
+    #translator-plugin-new-language-modal .modal-content .modal-body table tbody tr th,
+    #translator-plugin-new-language-modal .modal-content .modal-body table tbody tr td,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table thead tr th,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table thead tr td,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody tr th,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody tr td {
+      border: 0; }
+    #translator-plugin-new-language-modal .modal-content .modal-body table thead tr th,
+    #translator-plugin-new-language-modal .modal-content .modal-body table tbody tr th,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table thead tr th,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody tr th {
+      color: #8F9EC2; }
+    #translator-plugin-new-language-modal .modal-content .modal-body table thead tr td,
+    #translator-plugin-new-language-modal .modal-content .modal-body table tbody tr td,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table thead tr td,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody tr td {
+      width: 100%;
+      border: 0;
+      color: #002E5E; }
+  #translator-plugin-new-language-modal .modal-content .modal-body table thead,
+  #translator-plugin-delete-language-modal .modal-content .modal-body table thead {
+    border-bottom: 1px solid #F9F9FA; }
+    #translator-plugin-new-language-modal .modal-content .modal-body table thead th,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table thead th {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400;
+      color: #8F9EC2; }
+  #translator-plugin-new-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area,
+  #translator-plugin-delete-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background-color: #F9F9FA;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important; }
+    #translator-plugin-new-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area .translator-plugin-word:hover, #translator-plugin-new-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area .translator-plugin-word:focus, #translator-plugin-new-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area .translator-plugin-word:active,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area .translator-plugin-word:hover,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area .translator-plugin-word:focus,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area .translator-plugin-word:active {
+      box-shadow: none;
+      outline: none; }
+    #translator-plugin-new-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area a,
+    #translator-plugin-delete-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area a {
+      margin-left: 15px;
+      color: #002E5E; }
+      #translator-plugin-new-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area a i,
+      #translator-plugin-delete-language-modal .modal-content .modal-body table tbody td .translator-plugin-word-area a i {
+        vertical-align: bottom; }
+#translator-plugin-new-language-modal .modal-content .modal-footer .btn-secondary,
+#translator-plugin-delete-language-modal .modal-content .modal-footer .btn-secondary {
+  border: 0;
+  color: #002E5E;
+  background-color: #F9F9FA; }
+  #translator-plugin-new-language-modal .modal-content .modal-footer .btn-secondary:hover,
+  #translator-plugin-delete-language-modal .modal-content .modal-footer .btn-secondary:hover {
+    opacity: 0.7; }
+#translator-plugin-new-language-modal .modal-content .modal-footer .btn-primary,
+#translator-plugin-delete-language-modal .modal-content .modal-footer .btn-primary {
+  border: 0;
+  color: #FFFFFF;
+  background-color: #1F90FF; }
+  #translator-plugin-new-language-modal .modal-content .modal-footer .btn-primary:hover,
+  #translator-plugin-delete-language-modal .modal-content .modal-footer .btn-primary:hover {
+    opacity: 0.7; }
+
+/*# sourceMappingURL=styles.css.map */

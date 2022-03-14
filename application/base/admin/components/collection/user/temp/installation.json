@@ -1,0 +1,11 @@
+{
+
+    "version": "theme version",
+
+    "required": "midrub version",
+
+    "php": "applicationbaseuserthemestest.zip",
+
+    "assets": "assetsbaseuserthemestest.zip"
+
+}

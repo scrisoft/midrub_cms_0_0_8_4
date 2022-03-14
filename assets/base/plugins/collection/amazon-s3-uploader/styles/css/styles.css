@@ -1,0 +1,171 @@
+/*******************************
+IMPORT FONTS
+********************************/
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,500;1,700&family=Inter:wght@200;300;400;500;600&display=swap");
+/*******************************
+AMAZON S3 UPLOADER GENERAL CLASSES
+********************************/
+.theme-box {
+  background-color: #fbfeff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+
+.theme-font-1 {
+  font-family: "Roboto", "Open Sans", "Nunito", "Nunito Sans", sans-serif; }
+
+.theme-color-black {
+  color: #000031; }
+
+.theme-color-grey {
+  color: #ACA9BB; }
+
+.theme-color-grey-light {
+  color: #FAF7FF; }
+
+.theme-background-grey-light {
+  background-color: #F9F9FA; }
+
+.theme-pagination {
+  margin-bottom: 0;
+  display: inline-flex; }
+  .theme-pagination .page-item {
+    list-style: none; }
+    .theme-pagination .page-item .page-link {
+      width: 36px;
+      height: 36px;
+      border: 0;
+      line-height: 21px;
+      text-align: center;
+      font-size: 14px;
+      background-color: #FFFFFF; }
+      .theme-pagination .page-item .page-link:hover, .theme-pagination .page-item .page-link:active, .theme-pagination .page-item .page-link:focus {
+        background-color: #ebedf1;
+        box-shadow: none;
+        outline: none; }
+    .theme-pagination .page-item:first-child .page-link, .theme-pagination .page-item:last-child .page-link {
+      border: 0;
+      border-radius: 50%;
+      font-size: 22px;
+      background-color: #f7f9fc; }
+      .theme-pagination .page-item:first-child .page-link:hover, .theme-pagination .page-item:first-child .page-link:active, .theme-pagination .page-item:first-child .page-link:focus, .theme-pagination .page-item:last-child .page-link:hover, .theme-pagination .page-item:last-child .page-link:active, .theme-pagination .page-item:last-child .page-link:focus {
+        background-color: #ebedf1;
+        box-shadow: none;
+        outline: none; }
+      .theme-pagination .page-item:first-child .page-link i, .theme-pagination .page-item:last-child .page-link i {
+        margin-left: -5px; }
+    .theme-pagination .page-item.disabled .page-link {
+      opacity: 0.5; }
+    .theme-pagination .page-item.active .page-link {
+      background-color: #ebedf1; }
+    .theme-pagination .page-item:first-child {
+      margin-right: 15px; }
+      @media screen and (max-width: 1609px) and (min-width: 1443px) {
+        .theme-pagination .page-item:first-child {
+          margin-right: 3px; } }
+    .theme-pagination .page-item:nth-child(2) .page-link {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%; }
+    .theme-pagination .page-item:nth-last-child(2) .page-link {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%; }
+    .theme-pagination .page-item:last-child {
+      margin-left: 15px; }
+      @media screen and (max-width: 1609px) and (min-width: 1443px) {
+        .theme-pagination .page-item:last-child {
+          margin-left: 3px; } }
+
+.theme-settings-page {
+  padding-top: 15px; }
+  .theme-settings-page .nav-pills {
+    margin: 0 0 15px;
+    padding: 0; }
+    .theme-settings-page .nav-pills li {
+      margin-bottom: 10px; }
+      .theme-settings-page .nav-pills li a {
+        background-color: transparent; }
+        .theme-settings-page .nav-pills li a i {
+          vertical-align: middle;
+          margin-top: -4px;
+          margin-right: 10px;
+          font-size: 20px; }
+      .theme-settings-page .nav-pills li:hover a, .theme-settings-page .nav-pills li:focus a, .theme-settings-page .nav-pills li:active a, .theme-settings-page .nav-pills li.theme-settings-nav-active a {
+        border-radius: 5px;
+        background-color: #FFFFFF; }
+  .theme-settings-page .panel {
+    border: 0;
+    box-shadow: none; }
+    .theme-settings-page .panel .panel-heading {
+      margin: 0;
+      padding: 0 15px;
+      border-bottom: 1px solid #e3eaef;
+      line-height: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: transparent; }
+      .theme-settings-page .panel .panel-heading i {
+        vertical-align: middle;
+        margin-top: -5px;
+        margin-right: 5px; }
+    .theme-settings-page .panel .panel-body {
+      padding: 0;
+      min-height: 700px; }
+      .theme-settings-page .panel .panel-body .theme-settings-options-list {
+        margin: 0;
+        padding: 0; }
+        .theme-settings-page .panel .panel-body .theme-settings-options-list li {
+          padding: 15px;
+          border-bottom: 1px solid rgba(65, 106, 166, 0.05);
+          list-style: none; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li:last-child {
+            border-bottom: 0; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li h4 {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: 400; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li p {
+            margin-bottom: 0;
+            font-size: 13px; }
+          .theme-settings-page .panel .panel-body .theme-settings-options-list li input[type="text"] {
+            margin-bottom: 0;
+            height: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            box-shadow: none; }
+            .theme-settings-page .panel .panel-body .theme-settings-options-list li input[type="text"]:active, .theme-settings-page .panel .panel-body .theme-settings-options-list li input[type="text"]:focus {
+              border: 1px solid rgba(0, 0, 0, 0.27) !important; }
+    .theme-settings-page .panel .panel-footer {
+      margin: 0;
+      border: 0;
+      border-top: 1px solid #e3eaef;
+      background-color: transparent; }
+
+/*******************************
+AMAZON S3 UPLOADER STYLES
+********************************/
+.theme-settings-page .panel.panel-failed-requests .panel-body {
+  padding: 15px; }
+  .theme-settings-page .panel.panel-failed-requests .panel-body ul {
+    margin-bottom: 0; }
+    .theme-settings-page .panel.panel-failed-requests .panel-body ul li {
+      margin-bottom: 13px;
+      padding-bottom: 0;
+      border: 0;
+      border-radius: 5px; }
+      .theme-settings-page .panel.panel-failed-requests .panel-body ul li:last-child {
+        margin-bottom: 0; }
+      .theme-settings-page .panel.panel-failed-requests .panel-body ul li p {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        word-break: break-all;
+        background-color: #FFFFFF; }
+      .theme-settings-page .panel.panel-failed-requests .panel-body ul li .badge {
+        margin-bottom: 10px;
+        font-weight: 400;
+        background-color: transparent; }
+        .theme-settings-page .panel.panel-failed-requests .panel-body ul li .badge i {
+          vertical-align: middle;
+          margin-top: -4px;
+          margin-right: 5px;
+          font-size: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

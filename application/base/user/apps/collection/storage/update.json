@@ -1,0 +1,8 @@
+{
+    "version": "Version 0.0.6",
+    "changelogs": "This update contains improvemnts.",
+    "files": [
+        "application\/base\/user\/apps\/collection\/storage\/main.php",
+        "application\/base\/user\/apps\/collection\/storage\/inc\/admin.php"
+    ]
+}

@@ -1,0 +1,379 @@
+<!doctype html>
+<!--[if IE 9]> <html class="ie9 no-js supports-no-cookies" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js supports-no-cookies" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Midrub Wchatbot Documentation</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Load Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Load Main CSS -->
+    <link href="assets/styles/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col xl3 s12">
+                    <div class="col xl12 s12 nav-menu">
+                        <ul>
+                            <li class="dropdown open"><a href="#">Introduction <i
+                                        class="material-icons expand">expand_more</i><i
+                                        class="material-icons expand-open">chevron_right</i></a>
+                                <ul>
+                                    <li><a href="#introduction-about-app" class="article">About App</a></li>
+                                    <li><a href="#introduction-about-code" class="article">About Code</a></li>
+                                    <li><a href="#introduction-about-translation" class="article">How to translate</a></li>
+                                    <li><a href="#introduction-changelogs" class="article">Changelogs</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Configuration
+                                    <i class="material-icons expand">expand_more</i>
+                                    <i class="material-icons expand-open">chevron_right</i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#configuration-instalation" class="article">
+                                            Installation
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="#configuration-configure" class="article">
+                                            Configure Webhook
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="#configuration-enable-for-team" class="article">
+                                            Enable for Team
+                                        </a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="#configuration-add-icons" class="article">
+                                            How to add icons
+                                        </a>
+                                    </li>                                                                                                   
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Faq <i class="material-icons expand">expand_more</i><i
+                                        class="material-icons expand-open">chevron_right</i></a>
+                                <ul>
+                                    <li>
+                                        <a href="#faq-configure-whatsapp-numbers" class="article">
+                                            Configure Whatsapp Numbers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#faq-quick-replies" class="article">
+                                            Quick Replies
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#faq-default-response" class="article">
+                                            Default Response
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#faq-manage-categories" class="article">
+                                            Manage Categories
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="#faq-history" class="article">
+                                            History
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a href="#faq-subscribers" class="article">
+                                            Subscribers
+                                        </a>
+                                    </li>   
+                                    <li>
+                                        <a href="#faq-phone-numbers" class="article">
+                                            Phone Numbers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#faq-email-addresses" class="article">
+                                            Email Addresses
+                                        </a>
+                                    </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col xl9 s12 content">
+                    <div class="col xl12 s12">
+                        <div class="row">
+                            <div class="input-field clean col xl12 s12">
+                                <i class="material-icons prefix">search</i>
+                                <input type="text" id="autocomplete-input"
+                                    placeholder="Ask or enter a search term here…" class="autocomplete">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col clean xl12 s12">
+                                <article class="active" id="introduction-about-app">
+                                    <h2>About Midrub Wchatbot</h2>
+                                    <p>Midrub Wchatbot is an app for <a href="https://codecanyon.net/item/midrub-schedule-and-publish-on-the-most-popular-social-networks/17447773" target="_blank">Midrub</a>. You can't use it without <a href="https://codecanyon.net/item/midrub-schedule-and-publish-on-the-most-popular-social-networks/17447773" target="_blank">Midrub</a>.
+                                    </p>
+                                    <p>The goal of this app is to help you to save potential clients and save people to
+                                        find easy a response to their questions.</p>
+                                    <p>Midrub Wchatbot is an app for Midrub which allows you to create a list with Quick Replies for your Whatsapp's numbers. Each reply has a list with keywords as condition for Quick Reply and you can select even the accuracy for the keywords available in the messages.</p>
+                                    <p>You can connect your Whatsapp's numbers from Twilio and select one or several categories. Then, you have to select the same category or categories(at least one should be), and the bot will select the Quick Replies based on the number's categories which are used even in the Quick Replies. The bot will search for the best match and will reply. When the Midrub Wchatbot replies to a message, it saves the user as subscriber with the reply's categories and saves the conversation. You can see the subscribers and stats in both Quick Reply's page and in the History's page.</p>
+                                    <p>If no Quick Replies available based on the message content, you can create a default message which will be sent to your contacts if no Quick Reply available.</p>
+                                    <p>The Midrub Wchatbot app is able to identify the phone numbers and email addresses in the Whatsapp's messages. All of them will be saved in the Phone Numbers or Email Addresses pages. You can anytime see the message from where was extracted the phone number or email address. All emails and phone numbers can be exported in a CSV file.</p>
+                                    <p>The Subscribers page shows the subscribers saved by the bot and you can send to them promotional messages from the Midrub Wmarketing app.</p>
+                                    <p>The Audit Logs page shows in real time the bot activity. You will see the number of the replies per day and by selected Whatsapp's number. In addition, you will see the most popular Quick Replies by selected Whatsapp's number.</p>
+                                    <p>Bot replies could be limit based on the plans. The Midrub Wchatbot app can be used as SAAS an your clients could use it with their Twilio's account.&nbsp;</p>
+                                    <p>The Midrub Wchatbot app can be limited based on team's role. Each user could decide which team's members will be able to use this app.</p>
+                                </article>
+                                <article id="introduction-about-code">
+                                    <h2>About Midrub Wchatbot's Code</h2>
+                                    <p>The&nbsp;Midrub Wchatbot app has a code adapted for the Midrub CMS and it follows all parameters required
+                                        for a Midrub app. It has support for Midrub's api, cron jobs, ajax requests, hooks, teams, etc.&nbsp;</p>
+                                    <p>You can translate this app in several languages and all languages directories are located in the language
+                                        directory. If you want to translate it, please follow the documentation&nbsp;<a
+                                            href="https://www.midrub.com/categories/translation"
+                                            target="_blank">https://www.midrub.com/categories/translation</a>
+                                        <a href="https://www.midrub.com/categories/translation" target="_blank"></a>
+                                    </p>
+                                    <p>The hooks located in the directory inc allows you to configure this app in the admin panel, restrict per plan and
+                                        restrict per team. You can add there even other kind of files. </p>
+                                    <p>In the controllers directory you will see 3 files: user, ajax and bot. User is to display the html content to
+                                        users. Ajax is to process the Ajax Requests. Bot replies to messages in messenger.</p>
+                                    <p>In the directory helpers you will find all files created to manage better the code and process only required
+                                        data. The helpers are based on the controllers directory's files.</p>
+                                    <p>In the models directory you will find the app's models which creates the required tables in the database. I like
+                                        now to use more the Midrub's Base Model for simply SQL queries but for more complex queries i'm using the app's
+                                        model.</p>
+                                    <p>The directory views contains the views files loaded from from the User's controller.&nbsp;</p>
+                                    <p>In this app i've used a new library with font icons which you can find here&nbsp;<a
+                                            href="https://lineicons.com/icons/" target="_blank">https://lineicons.com/icons/</a>&nbsp;This library isn't
+                                        loaded from app, it is available in the Midrub User's Theme, Luna. I'm providing the theme together with the
+                                        Midrub Wchatbot app. If you still want to use the Blue Theme, just add in the header from admin the link
+                                        to icons.</p>
+                                </article>
+                                <article id="introduction-about-translation">
+                                    <h2>About Midrub Wchatbot's Translation</h2>
+                                    <p>If you want to translate the Midrub Wchatbot app, please look here <a href="https://www.midrub.com/articles/how-to-translate-a-midrub-app-for-user" target="_blank">https://www.midrub.com/articles/how-to-translate-a-midrub-app-for-user</a></p>
+                                </article>
+                                <article id="introduction-changelogs">
+                                    <h2>About Midrub Wchatbot's Changelogs</h2>
+                                    <br>
+                                    <h4>Version 0.0.4</h4>
+                                    <br>
+                                    <ul>
+                                        <li>Added support for Midrub 0.0.8.2.</li>
+                                    </ul>
+                                    <br> 
+                                    <br>
+                                    <h4>Version 0.0.3</h4>
+                                    <br>
+                                    <ul>
+                                        <li>Improved the identification of the received messages for quick replies.</li>
+                                    </ul>
+                                    <br>                                  
+                                    <br>
+                                    <h4>Version 0.0.2</h4>
+                                    <br>
+                                    <ul>
+                                        <li>Added support for one click installation.</li>
+                                        <li>Added support for automatic updates.</li>
+                                    </ul>
+                                    <br>                                  
+                                    <br>
+                                    <h4>Version 0.0.1</h4>
+                                    <br>
+                                    <ul>
+                                        <li>Replies.</li>
+                                        <li>Whatsapp Numbers manager.</li>
+                                        <li>Subscribers.</li>
+                                        <li>History.</li>
+                                        <li>Audit Logs.</li>
+                                    </ul>
+                                </article>
+                                <article id="configuration-instalation">
+                                    <h2>How to install the Midrub Wchatbot</h2>
+                                    <p>
+                                        To install the Midrub Wchatbot app in Midrub, you just have to:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Sign In as administrator.
+                                        </li>
+                                        <li>
+                                            Click on the User menu's item.
+                                        </li>
+                                        <li>
+                                            Click on the New App button.
+                                        </li>  
+                                        <li>
+                                            Click on the Upload App button and select the zip downloaded from CodeCanyon.
+                                        </li>                                                                                
+                                    </ul>
+                                    <p>
+                                        You can see the installation process even in the video below:
+                                    </p>
+                                    <p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/o2fODG_QBYI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </p>
+                                </article>
+                                <article id="configuration-configure">
+                                    <h2>How to configure the Midrub Wchatbot's webhook</h2>
+                                    <p>Midrub Wchatbot is based on Twilio and each user should add the app's webhook url for their Twilio's numbers. You have to add first the exception 'guest/wchatbot' in config.php for the variable $config['csrf_exclude_uris'].</p>
+                                    <p>In the video below you can see how your clients could use the webhook's url:</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BzjoSGF3m9c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>                                
+                                <article id="configuration-enable-for-team">
+                                    <h2>How to enable the Midrub Wchatbot app for team's members</h2>
+                                    <p>By default the&nbsp;Midrub Wchatbot app is disabled for user's team and user could allow access to some roles to access this app.&nbsp;</p>
+                                    <p>To enable the&nbsp;Midrub Wchatbot per team's role:</p>
+                                    <ul>
+                                        <li>Go to My Team.</li>
+                                        <li>Click on the&nbsp; <i class="icon-user-following"></i> icon.</li>
+                                        <li>Click on the role where you want to allow access.</li>
+                                        <li>Enable&nbsp;Whatsapp Chatbot.</li>
+                                    </ul>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OfdLFrwjc14" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>                                
+                                <article id="configuration-add-icons">
+                                    <h2>How to add icons to Midrub Wchatbot</h2>
+                                    <p>In the Midrub Wchatbot app i've used a new font icons, LineIcons. The pack is free and you can use it in Midrub or your projects,&nbsp;</p>
+                                    <p>I didn't included this pack by default in the Midrub's app. It is included in the new Midrub User's theme created for the Chatbot apps which has the name Luna. You will receive it by request.</p>
+                                    <p>If you don't want the Luna theme, you have to add the LineIcons links in Midrub -&gt; Admin -&gt; User -&gt; User Settings -&gt; Header Code.&nbsp;</p>
+                                    <p>The link could be copied here https://lineicons.com/usage/</p>
+                                </article>
+                                <article id="faq-configure-whatsapp-numbers">
+                                    <h2>How to configure the Whatsapp numbers for Midrub Wchatbot</h2>
+                                    <p>Midrub Wchatbot is a Midrub's app which allows to auto reply to the Whatsapp messages. To be able to use Midrub Wchatbot you have to use Twilio and connect Whatsapp numbers approved by Twilio.</p>
+                                    <p>To configure the Whatsapp numbers in the Midrub Wchatbot app.</p>
+                                    <ul>
+                                        <li>Connect the Whatsapp numbers in the Midrub Wchatbot -&gt; Numbers -&gt; Icon with user +. </li>
+                                        <li>Click on the button Connect Numbers.</li>
+                                        <li>Enter your Twilio's Account SID.</li>
+                                        <li>Enter your Twilio's Auth Token.</li>
+                                        <li>Click on the button Connect.</li>
+                                        <li>Close the&nbsp;Whatsapp Numbers Manager modal.</li>
+                                        <li>You will see all connected numbers in the&nbsp;Whatsapp Numbers section.</li>
+                                        <li>Click on the Connect button at the Whatsapp Number which you want to configure.</li>
+                                        <li>.You will see the form to add the&nbsp;Default Response. If you want to add one, click on the button Enable too.</li>
+                                        <li>Then select a category or several categories. The categories are important because only the replies which have the selected categories will reply to the Whatsapp number's messages which have the categories.&nbsp;</li>
+                                    </ul>
+                                    <p>
+                                        <br>
+                                    </p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dls9X5mPa0E" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>
+                                <article id="faq-quick-replies">
+                                    <h2>How chatbot replies to messages based on the Whatsapp's messages content</h2>
+                                    <p>The Midrub Wchatbot app could auto reply to the Whatsapp's messages based on the message content. For this scope, the Midrub Wchatbot app has the section Replies where is possible to create replies and enter the required keywords which should be in Whatsapp's messages to auto reply.</p>
+                                    <p>The Replies works in this way:</p>
+                                    <ul>
+                                        <li>First you have to connect your Whatsapp numbers from the Whatsapp Numbers section.</li>
+                                        <li>Then, you have to select a category for your Whatsapp numbers.</li>
+                                        <li>Then, go to the Replies page and click on the New Reply button.</li>
+                                        <li>Enter the keywords which should be in the Whatsapp messages.</li>
+                                        <li>Enter the response.</li>
+                                        <li>Then, in the reply's page you can select the accuracy for your keywords.</li>
+                                        <li>The most important step is to select the category for the Replies(if you want to auto reply to a Whatsapp Number's messages, the Reply should have at least one category which is selected even for the Whatsapp number).</li>
+                                    </ul>
+                                    <p>
+                                        <br>
+                                    </p>
+                                    <p>In the video below you can see how Replies works in the Midrub Wchatbot app:</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EEse6dUejGw" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>  
+                                <article id="faq-default-response">
+                                    <h2>How to set up a default response for Whatsapp's messages</h2>
+                                    <p>The Wchatbot app allows you easily to set up a default response which will be sent to users if the bot don't has a reply based on the users messages.&nbsp;</p>
+                                    <p>The default response is easy to create:</p>
+                                    <ul>
+                                        <li>Go to the Midrub Wchatbot app.</li>
+                                        <li>Click on the Whatsapp Numbers link.</li>
+                                        <li>Click on the Connect button at the Whatsapp number(for which you want to set up the default response).</li>
+                                        <li>In the box&nbsp;Default Response you will see the textarea Text Reply.</li>
+                                        <li>Enter a default response.</li>
+                                        <li>Click on Enable.</li>
+                                    </ul>
+                                    <p>For default response the categories aren't required. The users will receive the default response if the number has or no selected categories.</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oSg0oxSBUf8" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>   
+                                <article id="faq-manage-categories">
+                                    <h2>Manage the categories in the Midrub Wchatbot app</h2>
+                                    <p>It's important to know, the categories in Wchatbot could be used in all chatbot apps(Facebook Chatbot, Facebook Marketing, Facebook Commenter, Wmarketing, etc) and you can use the categories created in the Wchatbot for Quick Replies which are sincronyzed with all Midrub's app for chatbots.</p>
+                                    <p>The categories are the most important feature because:</p>
+                                    <ul>
+                                        <li>Them allows to manage easily the Quick Replies. You don't need to take care to asign the Quick Replies every time when you're reconnecting a Whatsapp Number.</li>
+                                        <li>People which will get the Quick Reply, will be saved with the Quick Replies category and next we can use them for marketing based on the category.</li>
+                                        <li>Whatsapp Numbers can be easily configured. You just have to select the categories which you've added in some Quick Replies.</li>
+                                    </ul>
+                                    <p>The categories can be created and deleted only from the Reply's page. First of all you have to create a Quick Reply to be able to use the Categories.</p>
+                                    <p>In the video below you can see how to manage the Midrub Wchatbot's categories:</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JaJFni8SCjY" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>   
+                                <article id="faq-history">
+                                    <h2>Get conversations in the Midrub Wchatbot's history</h2>
+                                    <p>All Chatbot's history can be read in the Midrub Wchatbot's app -&gt; History Page. There you will see the list with the saved conversations. Conversations are saved if the Wchatbot's app has replied based on your keywords parameters or has replied with the default message.</p>
+                                    <p>The search input allows to search the conversations based on the Whatsapp number. For example you want to see all conversations of a phone number, you will enter the phone number and the History Page will show you the conversations with paginations if them are more than 10.</p>
+                                    <p>In the conversation page, you will see the phone number which has contacted you, time when the bot has received the message, the user's message and the bot's response.</p>
+                                    <p>You will see even a user's image which is the default in Midrub(not from Whatsapp).</p>
+                                    <p>The conversations can be get even from the reply's page. The reply's page shows in a list all subscribers which have received the response. If you're clicking on the phone number, you will get the conversation.</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JAy9w_E8hy4" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>   
+                                <article id="faq-subscribers">
+                                    <h2>Get all whatsapp subscribers which have contacted you</h2>
+                                    <p>One goal of the&nbsp;Midrub Wchatbot app is to collect your potential clients and save them in one or more categories. How this works? First you have to create the Replies, create categories and connect the Whatsapp's numbers. Select categories for the replies and select categories for Whatsapp's numbers. Every time when a potential client will get an auto reply, will be saved in the database with the categories which has the received response.</p>
+                                    <p>All people will be saved as subscribers in the Midrub Wchatbot app -&gt; Subscribers Page. There you can find them easily by using the search input or by page.&nbsp;</p>
+                                    <p>In the subscriber's page you will see the phone number of the subscriber, all messages which the subscriber has sent to you and the received response. Below the messages, you will see all categories. You can anytime select or unselect the categories.</p>
+                                    <p>The categories of the subscribers will be used in the Midrub Wmarketing app.</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CDlIzO1ZMHA" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>
+                                <article id="faq-phone-numbers">
+                                    <h2>How to save and export the phone numbers from the Whatsapp's messages</h2>
+                                    <p>The Midrub Wchatbot app is able to detect the phone numbers from the Whatsapp's messages and save them in a list. The saved messages can be seen in the Midrub Wchatbot app -&gt; Phone Numbers.</p>
+                                    <p>Every time when is saved a new phone number, you will see a notification in the Replies page which is the first page in the Midrub Wchatbot app. With a click you can see the conversation from where was saved the phone number.&nbsp;</p>
+                                    <p>The phone numbers can be managed from the Midrub Wchatbot app -&gt; Phone Numbers. The search input allows to search&nbsp;through the saved phone numbers.</p>
+                                    <p>The button Export CSV allows to export all phone numbers in a CSV file.</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/S4z2Xin5Exc" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>
+                                <article id="faq-email-addresses">
+                                    <h2>How to save and export the email addresses from the Whatsapp's messages</h2>
+                                    <p>Midrub Wchatbot is a Midrub's app which could be used to auto reply to the Whatsapp messages. Moreover, Midrub Wchatbot saved the messages in the database and saves in separate tables the phone numbers and email addresses.</p>
+                                    <p>The saved email addresses can be seen in the Midrub Wchatbot app -&gt; Email Addresses. There you will see all saved email addresses. You can search emails by using the search input. The Export CSV button allows to export the saved email addresses in a CSV file.</p>
+                                    <p>If you're clicking on an email address you will see the message from where was saved the email address. Also you can bulk delete the email addresses.&nbsp;&nbsp;</p>
+                                    <p>When you have new email addresses you will see the notification in the Replies page.</p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TDOtoG5e4FE" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </article>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Load the main Documentation javascript file -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

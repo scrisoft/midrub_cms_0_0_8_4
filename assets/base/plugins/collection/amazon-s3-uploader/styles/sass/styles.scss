@@ -1,0 +1,327 @@
+/*******************************
+IMPORT FONTS
+********************************/
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,500;1,700&family=Inter:wght@200;300;400;500;600&display=swap');
+
+/*******************************
+AMAZON S3 UPLOADER GENERAL CLASSES
+********************************/
+
+.theme-box {
+    background-color: #fbfeff;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+
+.theme-font-1 {
+    font-family: "Roboto", "Open Sans", "Nunito", "Nunito Sans", sans-serif;
+}
+
+.theme-color-black {
+    color: #000031;
+}
+
+.theme-color-grey {
+    color: #ACA9BB;
+}
+
+.theme-color-grey-light {
+    color: #FAF7FF;
+}
+
+.theme-background-grey-light {
+    background-color: #F9F9FA;
+}
+
+.theme-pagination {
+    margin-bottom: 0;
+    display: inline-flex;
+
+    .page-item {
+        list-style: none;
+
+        .page-link {
+            width: 36px;
+            height: 36px;
+            border: 0;
+            line-height: 21px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #FFFFFF;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #ebedf1;
+                box-shadow: none;
+                outline: none;
+            }
+
+        }
+
+        &:first-child,
+        &:last-child {
+
+            .page-link {
+                border: 0;
+                border-radius: 50%;
+                font-size: 22px;
+                background-color: #f7f9fc;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: #ebedf1;
+                    box-shadow: none;
+                    outline: none;
+                }
+
+                i {
+                    margin-left: -5px;
+                }
+
+            }
+
+        }
+
+        &.disabled {
+
+            .page-link {
+                opacity: 0.5;
+            }
+
+        }
+
+        &.active {
+
+            .page-link {
+                background-color: #ebedf1;
+            }
+
+        }
+
+        &:first-child {
+            margin-right: 15px;
+
+            @media screen and (max-width: 1609px) and (min-width: 1443px) {
+
+                & {
+                    margin-right: 3px;
+                }
+
+            }
+
+        }
+
+        &:nth-child(2) {
+
+            .page-link {
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+
+        }
+
+        &:nth-last-child(2) {
+
+            .page-link {
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+            }
+
+        }
+
+        &:last-child {
+            margin-left: 15px;
+
+            @media screen and (max-width: 1609px) and (min-width: 1443px) {
+
+                & {
+                    margin-left: 3px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.theme-settings-page {
+    padding-top: 15px;
+
+    .nav-pills {
+        margin: 0 0 15px;
+        padding: 0;
+        
+        li {
+            margin-bottom: 10px;
+            
+            a {
+                background-color: transparent;
+                
+                i {
+                    vertical-align: middle;
+                    margin-top: -4px;
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+                
+            }
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.theme-settings-nav-active {
+
+                a {
+                    border-radius: 5px;
+                    background-color: #FFFFFF;
+                }
+
+            }
+            
+        }
+
+    }
+
+    .panel {
+        border: 0;
+        box-shadow: none;
+        
+        .panel-heading {
+            margin: 0;
+            padding: 0 15px;
+            border-bottom: 1px solid #e3eaef;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: transparent;
+            
+            i {
+                vertical-align: middle;
+                margin-top: -5px;
+                margin-right: 5px;
+            }
+            
+        }
+        
+        .panel-body {
+            padding: 0;
+            min-height: 700px;
+            
+            .theme-settings-options-list {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: 15px;
+                    border-bottom: 1px solid rgba(65, 106, 166, 0.05);
+                    list-style: none;
+                    
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    h4 {
+                        margin-top: 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        font-size: 13px;
+                    }
+
+                    input[type="text"] {
+                        margin-bottom: 0;
+                        height: 40px;
+                        border: 1px solid rgba(0, 0, 0, 0.07);
+                        box-shadow: none;
+                    
+                        &:active,
+                        &:focus {
+                            border: 1px solid rgba(0, 0, 0, 0.27) !important;
+                        }
+                    
+                    }
+
+                }
+
+            }
+            
+            
+        }
+        
+        .panel-footer {
+            margin: 0;
+            border: 0;
+            border-top: 1px solid #e3eaef;
+            background-color: transparent;
+        }
+        
+    }
+
+}
+
+/*******************************
+AMAZON S3 UPLOADER STYLES
+********************************/
+
+.theme-settings-page {
+
+    .panel {
+
+        &.panel-failed-requests {
+
+            .panel-body {
+                padding: 15px;
+
+                ul {
+                    margin-bottom: 0;
+
+                    li {
+                        margin-bottom: 13px;
+                        padding-bottom: 0;
+                        border: 0;
+                        border-radius: 5px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            margin-bottom: 10px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            word-break: break-all;
+                            background-color: #FFFFFF;
+                        }
+
+                        .badge {
+                            margin-bottom: 10px;
+                            font-weight: 400;
+                            background-color: transparent;
+
+                            i {
+                                vertical-align: middle;
+                                margin-top: -4px;
+                                margin-right: 5px;
+                                font-size: 20px;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+    
+    }
+
+}
