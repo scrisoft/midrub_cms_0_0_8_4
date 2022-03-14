@@ -44,26 +44,11 @@ class Adminarea extends MY_Controller {
         // Load User Meta Model
         $this->load->model('user_meta');
         
-        // Load Notifications Model
-        $this->load->model('notifications');
-        
-        // Load Posts Model
-        $this->load->model('posts');
-        
-        // Load Plans Model
-        $this->load->model('plans');
-        
         // Load Urls Model
         $this->load->model('urls');
         
-        // Load Networks Model
-        $this->load->model('networks');
-        
         // Load Options Model
         $this->load->model('options');
-        
-        // Load Campaigns Model
-        $this->load->model('campaigns');
         
         // Load session library
         $this->load->library('session');
