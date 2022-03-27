@@ -147,10 +147,7 @@ class Main implements MidrubBasePaymentsInterfaces\Payments {
      * 
      * @return void
      */
-    public function cron_jobs() {
-
-        // Process the subscriptions
-        (new MidrubBasePaymentsCollectionStripeControllers\Cron)->subscriptions();        
+    public function cron_jobs() {     
         
     }
     
@@ -212,18 +209,70 @@ class Main implements MidrubBasePaymentsInterfaces\Payments {
             // Handle the event
             switch ( $payload['type'] ) {
 
+                case 'customer.subscription.created':
+
+                    // Verify if data exists
+                    if ( !empty($payload['data']) ) {
+
+                        // Verify if object exists
+                        if ( !empty($payload['data']['object']) ) {
+
+                            // Verify if plan exists
+                            if ( !empty($payload['data']['object']['plan']) ) {
+
+                                // Verify if plan's id exists
+                                if ( !empty($payload['data']['object']['plan']['id']) ) {
+
+                                    // Get the transaction
+                                    $the_transaction = $this->CI->base_model->get_data_where('transactions',
+                                    '*',
+                                    array(
+                                        'net_id' => $payload['data']['object']['items']['data'][0]['price']['id'],
+                                        'gateway' => 'stripe'
+                                    ));
+
+                                    // Verify if transaction exists
+                                    if ( $the_transaction ) {
+
+                                        // Prepare subscription's parameters
+                                        $subscription_params = array(
+                                            'user_id' => $the_transaction[0]['user_id'],
+                                            'net_id' => $payload['data']['object']['id'],
+                                            'amount' => $the_transaction[0]['amount'],
+                                            'currency' => $the_transaction[0]['currency'],
+                                            'gateway' => 'stripe',
+                                            'status' => 1,
+                                            'last_update' => date('Y-m-d'),
+                                            'created' => time()
+                                        );
+
+                                        // Save the subscription
+                                        $this->CI->base_model->insert('subscriptions', $subscription_params);
+
+                                    }                                    
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                    
+                    break;
+
                 case 'customer.subscription.updated':
 
-                    // Get the subscribtion saved in the database
+                    // Get the subscription saved in the database
                     $subscription = $this->CI->base_model->get_data_where('subscriptions', '*', array(
                         'net_id' => $payload['data']['object']['id'],
                         'gateway' => 'stripe'
                     ));
 
-                    // Verify if subscribtion exists
+                    // Verify if subscription exists
                     if ( $subscription ) {
 
-                        // Get the first transaction by subscribtion
+                        // Get the first transaction by subscription
                         $transaction = $this->CI->base_model->get_data_where('transactions', '*', array(
                             'net_id' => $payload['data']['object']['id'],
                             'gateway' => 'stripe'
@@ -320,7 +369,7 @@ class Main implements MidrubBasePaymentsInterfaces\Payments {
 
                 case 'customer.subscription.deleted':
 
-                    // Get the subscribtion saved in the database
+                    // Get the subscription saved in the database
                     $subscription = $this->CI->base_model->get_data_where('subscriptions', '*', array(
                         'net_id' => $payload['data']['object']['id'],
                         'gateway' => 'stripe'
@@ -329,7 +378,7 @@ class Main implements MidrubBasePaymentsInterfaces\Payments {
                     // Delete subscription's mark
                     delete_user_option($subscription[0]['user_id'], 'subscription');
 
-                    // Verify if subscribtion exists
+                    // Verify if subscription exists
                     if ( $subscription ) {
 
                         // Delete the subscription from the database
@@ -455,3 +504,5 @@ class Main implements MidrubBasePaymentsInterfaces\Payments {
     }
 
 }
+
+/* End of file main.php */
